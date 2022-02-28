@@ -1,0 +1,54 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta charset="UTF-8" />
+<title>Exemple style dans le doc html</title>
+<style type="text/css">
+
+#para1 strong{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:24px;
+	font-weight:900;
+	text-transform:uppercase;
+	color: red;
+	}
+
+p{
+	width:400px;
+	height:500px;
+	background-color:#CF0;
+	padding:100px;
+	}
+
+h1+p{
+	color:#090;
+}
+
+a:link{
+	color:#F00;
+	}
+
+a:visited{
+	color:rgb(0, 195, 255);
+	}
+	
+a:hover{
+	color:rgb(85, 104, 85);
+	}
+
+a:active{
+	color:#00F;
+	}
+
+</style>
+</head>
+<body>
+<h1>Titre</h1>
+<p id="para1"><a href="https://www.lipsum.com">Lorem</a> ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Pellentesque non lacus lacus, sed imperdiet odio. Pellentesque tempor commodo ligula ut blandit. Nulla vestibulum rutrum ipsum vitae faucibus! Cras in congue ligula. Morbi sit amet posuere sapien. Cras hendrerit nisl vel turpis viverra ut convallis justo interdum. Mauris id tortor id felis sagittis pretium sit amet vitae risus. Duis sed dolor id massa dapibus aliquam ac dictum elit.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque</strong> non lacus lacus, sed imperdiet odio. Pellentesque tempor commodo ligula ut blandit. Nulla vestibulum rutrum ipsum vitae faucibus! Cras in congue ligula. Morbi sit amet posuere sapien. Cras hendrerit nisl vel turpis viverra ut convallis justo interdum. Mauris id tortor id felis sagittis pretium sit amet vitae risus. Duis sed dolor id massa dapibus aliquam ac dictum elit.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in congue ligula. Morbi sit amet posuere sapien. Cras hendrerit nisl vel turpis viverra ut convallis justo interdum. Mauris id tortor id felis sagittis pretium sit amet vitae risus. Duis sed dolor id massa dapibus aliquam ac dictum elit.</p>
+
+<p id="para3" style ="color:red">Style déclaré directement à l'intérieur de la balise</p>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+
+
+
+.vert{
+	color:green;
+}
+
+.rouge{
+	color:red;
+}
+
+.orange{
+	color:orange;
+}
+
+.bleu{
+	color:blue;
+}
+
+#conteneur > section{
+	padding:10px;
+	background-color: #fff;
+}
+
+section .TechoWeb{
+	display:inline-block;
+	width:155px;
+	vertical-align:top;
+	padding:10px;
+	margin-right: 10px;
+}
+
+section .TechoWeb h1{
+	text-transform: uppercase;
+	font-size:16px;
+	color:blue;
+	margin-bottom: 10px;
+	font-weight: 100;
+}
+section .TechoWeb h1 .bdc{
+	text-transform: lowercase;
+}
+
+section .TechoWeb p{font-size:10px;}
+
+section .rectangle h2{
+	margin:0;
+	font-weight: 100;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+section .rectangle {
+	border-radius: 5px;
+	padding:5px;
+	margin:10px 0;
+}
+
+
+
+
+section .contenu{
+	display:inline-block;
+	width:520px;
+	vertical-align:top;
+	padding:5px;
+
+}
+
+section .contenu h1{margin:0; font-size: 20px}
+section p{font-size:14px;}
+
+
+section .contenu p:nth-child(3) img{
+	float:left;
+	margin-right: 10px;
+}
+
+section .pub{
+	display:inline-block;
+	width:175px;
+	vertical-align:top;
+	padding:0;
+	margin-left: 10px;
+}
+
+section .pub img{vertical-align:middle;}
+
+section footer{
+	font-style:italic;
+	background: transparent;
+}
+.ombre{box-shadow: 0 0 10px #999;}
