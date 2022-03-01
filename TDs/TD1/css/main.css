@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/* Custom fonts */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Roboto:wght@100;400;700&display=swap");
 
 :root {
   --background-color: #e5e5e5;
@@ -15,6 +16,16 @@
   font-family: "Roboto", sans-serif;
 }
 
+code {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: smaller;
+  font-weight: bold;
+
+  padding: 2px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 html {
   background-color: var(--background-color);
 }
@@ -22,6 +33,18 @@ html {
 body {
   margin: 0;
   height: 90%;
+}
+
+hr {
+  max-width: 70%;
+  border: 1px dashed black;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--text-highlight);
 }
 
 header {
@@ -69,13 +92,20 @@ h3 {
   text-decoration: none;
 }
 
+.menu > .current-page > a {
+  color: var(--text-highlight-dark);
+}
+
 .menu > li > a:hover {
   color: var(--text-highlight);
 }
 
 main {
-  max-width: calc(var(--max-width) - 30px);
-  margin: 0 auto;
+  max-width: calc(var(--max-width) - 60px);
+  margin: 0 auto 2em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 10px 30px;
 }
 
 .center {
@@ -85,18 +115,31 @@ main {
 }
 
 footer {
+  width: 100%;
   background-color: var(--background-color-dark);
-  width: var(--max-width);
+  max-width: var(--max-width);
   color: var(--text-white);
   min-height: 100px;
 
-  border-radius: 32px 8px;
+  border-radius: 8px 32px;
   margin: 20px auto 20px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+footer > p {
+  margin: 0px;
+}
+
+footer > a {
+  color: var(--text-white);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
 }
 
 .contact-form {
@@ -116,6 +159,13 @@ footer {
   min-height: 20px;
   border: 1px solid gray;
   border-radius: 4px;
+}
+
+.contact-form > label {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 0.5em;
+  margin: 10px 5px 0;
 }
 
 .contact-form > input[type="text"] {
@@ -158,4 +208,21 @@ blockquote.center {
 img.center ~ blockquote.center {
   width: 250px;
   font-size: smaller;
+}
+
+.custom-paragraph > p[align="left"],
+.custom-paragraph > p[align="right"] {
+  max-width: 70%;
+}
+
+.custom-paragraph > p[align="right"] {
+  margin: 0 0 0 auto;
+  text-align: left; /* since it's mirrored */
+
+  /* compatibility */
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
