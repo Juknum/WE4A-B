@@ -3,14 +3,9 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Introduction au PHP</title>
+<title>BlogIt!</title>
+<link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-	<div id="MainContainer">
-
-		<div class="header">
-			<hr>
-			<h1>Page Web Dynamique avec PHP - Les Bases</h1>
-			<hr>
-		</div>
+	<h1 align="center">BlogIt! It is it!</h1>
