@@ -24,6 +24,32 @@ class SQLconn {
         return htmlspecialchars($str);
     }
 
+    function newAccount() {
+        $attempted = false;
+        $success = false;
+        $error = NULL;
+
+        if (isset($_POST["name"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
+            $attempted = true;
+
+            if (strlen($_POST["name"]) < 4) $error = "Username must be at least 4 characters long!";
+            elseif ($_POST["password"] != $_POST["confirm"]) $error = "Passwords are different!";
+            else {
+                $username = $this->stringify($_POST["name"]);
+                $password = md5($_POST["password"]);
+
+                $query = "INSERT INTO `login` VALUES (NULL, '$username', '$password')";
+                $result = $this->conn->query($query);
+
+                // todo: mysql_affected_rows verification is deprecated since php 7
+
+                $success = true;
+            }
+        }
+
+        return array($attempted, $success, $error);
+    }
+
     function disconnectSQL() {
         $this->conn->close();
     }

@@ -1,10 +1,24 @@
 const showModal = (type) => {
-  // tell the form if it's a register or a simple login
-  document.getElementById('register-checkbox').checked = type === 'register' ? 'checked' : null;
-  // change button text with the type
-  document.getElementById('submit-btn').innerHTML = type;
+  let form = document.getElementById("login-form");
+  let submitButton = document.getElementById("submit-btn");
+  let confirmPassword = document.getElementById("confirm");
 
-  // show the modal
+  switch (type) {
+    case "login":
+      submitButton.innerHTML = "Login";
+      form.action = "./login.php";
+      confirmPassword.style.display = "none";
+      break;
+
+    case "register":
+    default:
+      submitButton.innerHTML = "Register";
+      form.action = "./register.php";
+      confirmPassword.style.display = "block";
+      break;
+  }
+
+  // finally: show the modal
   document.getElementById('modal').style.display = 'block';
 }
 

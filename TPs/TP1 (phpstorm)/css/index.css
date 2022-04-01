@@ -128,3 +128,32 @@ label[type=checkbox] {
 label[type=checkbox] > input[type=checkbox] {
   margin: 5px;
 }
+
+nav > div,
+nav {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+}
+
+nav {
+  justify-content: space-around;
+}
+
+nav > a,
+nav > div > button {
+  background: #ccc;
+  color: #000;
+  text-decoration: none;
+  padding: 14px 20px;
+  margin: 0;
+  font-size: small;
+  text-transform: uppercase;
+}
+
+nav > a:hover,
+nav > div > button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+  color: #000;
+}

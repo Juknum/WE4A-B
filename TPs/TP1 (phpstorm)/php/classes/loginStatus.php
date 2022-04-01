@@ -33,12 +33,22 @@ class loginStatus {
                 $row = $result->fetch_assoc();
                 $this->userID = $row["ID"];
                 $this->userName = $row["logname"];
-                $this->CreateLoginCookie($this->userName, $password);
+                $this->createLoginCookie($this->userName, $password, $_POST["remember"]);
                 $this->successful = true;
             }
             else $this->error = "This user does not exist/cannot be found; please create an account.";
 
         }
+    }
+
+    function createLoginCookie($username, $encryptedPassword, $remember) {
+        setcookie("name", $username, time() + ($remember ? 24 * 3600 : 3600));
+        setcookie("password", $encryptedPassword, time() + ($remember ? 24 * 3600 : 3600));
+    }
+
+    function logout() {
+        setcookie("name", NULL, -1);
+        setcookie("password", NULL, -1);
     }
 }
 
