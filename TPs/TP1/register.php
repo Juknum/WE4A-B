@@ -1,13 +1,14 @@
-<?=file_get_contents("./html/header.html")?>
+<?= file_get_contents("./html/header.html") ?>
 
-  <link rel="stylesheet" href="./styles/login.css">
-  <title>Register</title>
+<link rel="stylesheet" href="./styles/login.css">
+<title>Register</title>
 </head>
+
 <body>
   <main>
     <h1>Register</h1>
 
-    <form action="createAccount.php" method="post">
+    <form action="./php/createAccount.php.php" method="post">
       <script src="./js/passwordChecker.js"></script>
 
       <label for="username"><i class="fa-solid fa-signature"></i></label>
@@ -18,13 +19,13 @@
 
       <label for="password"><i class="fa-solid fa-lock"></i></label>
       <input oninput="passwordChecker()" type="password" name="password" placeholder="Password" id="password" required>
-      
-      <label for="confirm" id="confirmIcon" ><i class="fa-solid fa-lock"></i></label>
+
+      <label for="confirm" id="confirmIcon"><i class="fa-solid fa-lock"></i></label>
       <input oninput="passwordChecker()" type="password" name="confirm" placeholder="Confirm Password" id="confirm" required>
 
       <p align="center">
         <?php
-          if (isset($_GET["error"])) echo "<span class='error'>" . urldecode($_GET["error"]) . "</span><br>";
+        if (isset($_GET["error"])) echo "<span class='error'>" . urldecode($_GET["error"]) . "</span><br>";
         ?>
 
         <a href="login.php">Already have an account?</a>&nbsp;
@@ -34,6 +35,7 @@
     </form>
 
   </main>
-  
+
 </body>
+
 </html>

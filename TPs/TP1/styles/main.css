@@ -35,7 +35,7 @@ main {
   width: 100%;
   margin: 0 auto;
   padding: var(--padding-normal);
-  min-height: calc(100vh - var(--footer-height) - var(--padding-normal));
+  min-height: 100vh;
 }
 
 footer {
@@ -156,6 +156,14 @@ nav ul {
   padding: 0 var(--padding-normal);
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 330px) {
+  nav ul {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
 }
 
 nav ul li {
@@ -191,23 +199,12 @@ body {
   background-color: var(--bg-color);
 }
 
-/* for error text */
-.error {
-  color: var(--text-color-warning);
-  text-decoration: none;
-}
-/* for success text */
-.success {
-  color: var(--text-color-success);
-  text-decoration: none;
-}
-
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .column {
@@ -240,4 +237,15 @@ button:hover {
 
 .button .block {
   width: 100%;
+}
+
+/* for error text */
+.error {
+  color: var(--text-color-warning);
+  text-decoration: none;
+}
+/* for success text */
+.success {
+  color: var(--text-color-success);
+  text-decoration: none;
 }
