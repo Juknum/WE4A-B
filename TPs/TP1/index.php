@@ -1,16 +1,15 @@
-<?php
-	global $_DB_CONNEXION; 	//* {any} connection status
-	global $_USER_NAME;			//* {string} user name
-	global $_USER_ID;				//* {int} user ID
-	global $_USER_PASSWORD; //! might be not good to keep it here
-	global $_USER_LOGGED;   //* {checkLogin()} boolean value
+<?=file_get_contents("./html/header.html")?>
 
-	include("./php/utils.php");
-  include("./php/database.php");
+  <title>Home</title>
+</head>
+<body>
 
-	getUsersDatabase();
-	$_USER_LOGGED = checkLogin();
+  <?php require("./html/navbar.php")?>
 
-	// html parts
-	include("./php/multipart/index.php");
-?>
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus neque nisi est iure reprehenderit voluptatum voluptates deserunt sapiente incidunt similique harum dignissimos, provident vero magnam voluptate illum dicta tempore quod.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum consequuntur quas earum. Modi dolor perspiciatis quam adipisci nulla aliquid, eveniet, mollitia, ratione debitis tempore in. Beatae minus ipsum illum accusamus.</p>
+  </main>
+</body>
+
+<?=file_get_contents("./html/footer.html")?>
