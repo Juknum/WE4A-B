@@ -12,9 +12,8 @@
   if (mysqli_connect_errno()) exit("Failed to connect to MySQL: " . mysqli_connect_error());
 
   // check if the data from the login form was submitted
-  if (!isset($_POST["username"], $_POST["password"])) {
-    exit("Please fill both the username and password fields!");
-  }
+  if (!isset($_POST["username"], $_POST["password"])) 
+    header("Location: login.php?error=" . urlencode("Please fill both the username and password fields!"));
 
   // avoid SQL injection by preparing the SQL statement
   if ($stmt = $conn->prepare("SELECT id, password FROM accounts WHERE username = ?")) {
@@ -39,11 +38,10 @@
         $_SESSION["name"] = $_POST["username"];
         $_SESSION["id"] = $id;
         
-        header("Location: home.php");
+        header("Location: myblog.php");
 
-      } else echo "Incorrect password and/or password!";
-
-    } else echo "Incorrect username and/or password!";
+      } else header("Location: login.php?error=" . urlencode("Incorrect password and/or password!"));
+    } else header("Location: login.php?error=" . urlencode("Incorrect username and/or password!"));
 
     $stmt->close();
   }

@@ -1,0 +1,32 @@
+.searchbar {
+  justify-content: center;
+  width: 100%;
+}
+
+.searchbar > input {
+  border: none;
+  padding: calc(var(--padding-normal) / 2) calc(var(--padding-normal) / 2);
+}
+
+.searchbar > input[type="text"] {
+  max-width: 976px;
+  width: calc(100% - 50px);
+  border-radius: 0 5px 5px 0;
+  background-color: rgba(0,0,0,.3);
+}
+
+.searchbar > input[type="submit"] {
+  width: 36px;
+  height: 36px;
+  background: url("../images/search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  background-color: rgba(0,0,0,.5);
+  border-radius: 5px 0 0 5px;
+  cursor: pointer
+}
+
+.searchbar > input[type="submit"]:hover {
+  background-color: rgba(0,0,0,.2);
+}
